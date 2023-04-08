@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--How to run specific package-->
+
+<suite name="Group_5_Project" verbose="1">
+    <test name="Group-5 Smoke Test">
+        <packages>
+            <package name=""></package>
+        </packages>
+    </test>
+</suite>
