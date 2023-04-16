@@ -13,7 +13,18 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//*[.='Kabul Et']")
     public WebElement understandBtn;
-
+    @FindBy(css = "[class='common-sprite button-search']")
+    public WebElement searchBtn;
+    @FindBy(id = "search-input")
+    public WebElement searchInput;
+    @FindBy(xpath = "//a[.='Sepete Git']")
+    public WebElement sepeteGitBtn;
+    @FindBy(id="cart-items")
+    public WebElement cart;
+    @FindBy(css = "[class='mn-icon icon-arrowRight']")
+    public WebElement tumKitaplarBtn;
+    @FindBy(xpath = "(//span[.='Tüm Kitaplar'])[1]")
+    public WebElement tumKitaplarHover;
     @FindBy(xpath = "//a[.='Giriş Yap']")
     public WebElement girisYap;
 
