@@ -35,15 +35,5 @@ public abstract class BasePage {
     }
 
 
-    @FindBy(xpath = "//a[.='Giriş Yap']")
-    public WebElement girisYap;
-
-    public void getLoginPage(){
-        understandBtn.click();
-        BrowserUtils.hover(girisYap);
-        girisYap.click();
-    }
-
-
 
 }
