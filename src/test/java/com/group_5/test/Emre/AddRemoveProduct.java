@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class AddRemoveProduct extends TestBase {
     @Test
     public void addRemoveProduct() throws InterruptedException {
-        extentLogger = report.createTest("Kitap Yurdu Positive Search Test");
+        extentLogger = report.createTest("Kitap Yurdu Add&Remove Product Test");
         SeachPage seach = new SeachPage();
         CartPage cart = new CartPage();
         extentLogger.info("Click understand button");
