@@ -21,7 +21,7 @@ public class AccountPage extends BasePage{
 
 
     public void verifyLogin(){
-        Assert.assertEquals(merhabaKullanici.getText(),ConfigurationReader.get("userForAndLastName"));
+        Assert.assertEquals(merhabaKullanici.getText(),ConfigurationReader.get("userForAndLastNameMHMT"));
     }
 
 }

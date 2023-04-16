@@ -21,8 +21,8 @@ public class LoginPage extends BasePage {
 
     public void login(){
         getLoginPage();
-        emailInput.sendKeys(ConfigurationReader.get("username"));
-        passwordInput.sendKeys(ConfigurationReader.get("password"));
+        emailInput.sendKeys(ConfigurationReader.get("usernameMHMT"));
+        passwordInput.sendKeys(ConfigurationReader.get("passwordMHMT"));
         girisYapSubmit.click();
         understandBtn.click();
     }

@@ -1,4 +1,4 @@
-package com.group_5.test.Deneme;
+package com.group_5.test.MehmetTest;
 
 import com.group_5.pages.AccountPage;
 import com.group_5.pages.LoginPage;
