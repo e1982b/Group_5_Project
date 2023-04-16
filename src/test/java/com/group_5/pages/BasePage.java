@@ -1,5 +1,6 @@
 package com.group_5.pages;
 
+import com.group_5.utilities.BrowserUtils;
 import com.group_5.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +25,14 @@ public abstract class BasePage {
     public WebElement tumKitaplarBtn;
     @FindBy(xpath = "(//span[.='Tüm Kitaplar'])[1]")
     public WebElement tumKitaplarHover;
+    @FindBy(xpath = "//a[.='Giriş Yap']")
+    public WebElement girisYap;
+
+    public void getLoginPage(){
+        understandBtn.click();
+        BrowserUtils.hover(girisYap);
+        girisYap.click();
+    }
 
 
 
