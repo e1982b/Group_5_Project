@@ -27,6 +27,10 @@ public abstract class BasePage {
     public WebElement tumKitaplarHover;
     @FindBy(xpath = "//a[.='Giriş Yap']")
     public WebElement girisYap;
+    @FindBy(css = "[class='common-sprite allCategories']")
+    public WebElement tumKategorilerBtn;
+    @FindBy(xpath = "//*[.='Yazarlar']")
+    public WebElement yazarlarBtn;
 
     public void getLoginPage(){
         understandBtn.click();
