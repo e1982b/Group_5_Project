@@ -1,10 +1,9 @@
 package com.group_5.test.Yahya;
 
-import com.group_5.pages.BasePage;
-import com.group_5.pages.Elementler;
+import com.group_5.pages.AnyProductOnHomePage;
+import com.group_5.pages.CartPage;
 import com.group_5.test.TestBase;
 import com.group_5.utilities.BrowserUtils;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,30 +11,32 @@ public class VerifyProductQuantityInCart extends TestBase {
     @Test
     public void verifyProductQuantityInCart() {
         extentLogger = report.createTest("Kitap Yurdu Add Products in Cart");
-        Elementler elementler = new Elementler();
+
+        AnyProductOnHomePage anyProduct= new AnyProductOnHomePage();
+        CartPage cartPage=new CartPage();
 
         extentLogger.info("Verify that home page is visible successfully");
-        Assert.assertEquals(elementler.anaSayfa.getText(),"Haftanın Yayınevi");
+        Assert.assertEquals(anyProduct.anaSayfa.getText(),"Haftanın Yayınevi");
 
         extentLogger.info("Click 'View Product' for any product on home page");
-        BrowserUtils.hover(elementler.ürünSec);
-        elementler.ürünSec.click();
+        BrowserUtils.hover(anyProduct.ürünSec);
+        anyProduct.ürünSec.click();
 
         extentLogger.info("Click understand button");
-        elementler.understandBtn.click();
-        Assert.assertEquals(elementler.KörBaykus.getText(), "Kör Baykuş");
+        anyProduct.understandBtn.click();
+        Assert.assertEquals(anyProduct.Roket1.getText(), "Roket 1");
 
         extentLogger.info("Increase quantity to 4");
         int x = 0;
         for (x = 1; x <= 4; x++) {
-            BrowserUtils.hover(elementler.sepeteEkle);
-            elementler.sepeteEkle.click();
+            BrowserUtils.hover(anyProduct.sepeteEkle);
+            anyProduct.sepeteEkle.click();
         }
         extentLogger.info("Click 'Add to cart' button");
-        BrowserUtils.hover(elementler.Sepetim);
-        elementler.sepetim.click();
-        elementler.sepeteGit.click();
-        Assert.assertEquals(elementler.quantity.getText(),"4");
+        BrowserUtils.hover(anyProduct.sepetim);
+        anyProduct.sepetim.click();
+        anyProduct.sepeteGit.click();
+        Assert.assertEquals(cartPage.quantity.getText(),"4");
 
 
 
