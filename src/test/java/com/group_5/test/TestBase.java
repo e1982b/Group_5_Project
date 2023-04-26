@@ -61,14 +61,14 @@ public class TestBase {
     @AfterMethod
     public void tearDown(ITestResult result) throws InterruptedException, IOException {
 
-        if(result.getStatus()== ITestResult.FAILURE){
+        if (result.getStatus() == ITestResult.FAILURE) {
             extentLogger.fail(result.getName());
-            String screenShotPath= BrowserUtils.getScreenshot(result.getName());
+            String screenShotPath = BrowserUtils.getScreenshot(result.getName());
             extentLogger.addScreenCaptureFromPath(screenShotPath);
             extentLogger.fail(result.getThrowable());
         }
         Thread.sleep(2000);
-      //  Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 }
