@@ -35,6 +35,6 @@ public class EgxistingTest extends TestBase {
         Thread.sleep(2000);
         extentLogger.info("UyeolBtn");
         uyeolPage.UyeolBtn.click();
-
+        System.out.println("alles klar");
     }
 }
