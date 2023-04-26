@@ -12,4 +12,15 @@ public class CartPage extends BasePage {
     public WebElement totalPrice;
     @FindBy(css = "[class='fa fa-times red-icon']")
     public WebElement removeProductBtn;
+
+
+
+    @FindBy(id="cart-items-text")
+    public WebElement ÜrünSayisi;
+
+    @FindBy(xpath = "//*[@class='grand-total']/td[2]")
+    public WebElement totalFiyat;
+
+    @FindBy(id ="cart-items")
+    public WebElement quantity;
 }
