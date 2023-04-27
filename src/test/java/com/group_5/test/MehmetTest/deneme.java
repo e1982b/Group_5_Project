@@ -12,11 +12,6 @@ public class deneme extends TestBase {
     AccountPage accountPage;
 
     @Test
-    public void test1() {
-        System.out.println("Hallo World");
-    }
-
-    @Test
     public void k_Y_LoginWithCorrect_Mail_Pass() {
         loginPage = new LoginPage();
         accountPage = new AccountPage();

@@ -17,7 +17,7 @@ public abstract class BasePage {
     public WebElement searchBtn;
     @FindBy(id = "search-input")
     public WebElement searchInput;
-    @FindBy(xpath = "//a[.='Sepete Git']")
+    @FindBy(id = "js-cart")
     public WebElement sepeteGitBtn;
     @FindBy(id="cart-items")
     public WebElement cart;
