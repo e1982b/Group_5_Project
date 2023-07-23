@@ -34,7 +34,7 @@ public class AddRemoveProduct extends TestBase {
         BrowserUtils.verifyElementDisplayed(cart.atomikAliskanliklar);
         Assert.assertEquals(cart.geceYarisiKutuphanesi.getText(), "Gece Yarısı Kütüphanesi");
         extentLogger.info("Verify total price");
-        Assert.assertEquals(cart.totalPrice.getText(),"128,25");
+        Assert.assertEquals(cart.totalPrice.getText(),"123,36");
         Thread.sleep(1500);
         extentLogger.info("Remove the products from cart");
         cart.removeProductBtn.click();

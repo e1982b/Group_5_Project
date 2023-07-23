@@ -40,7 +40,7 @@ public class SearchTest extends TestBase {
         extentLogger.info("Search 'casper nirvana' product in search input and click search button");
         seach.searchInput.sendKeys("casper nirvana");
         seach.searchBtn.click();
-        extentLogger.info("Verify that searched product NOT found displayed");
+        extentLogger.info("Verify that searched product is NOT found displayed");
         Assert.assertTrue(seach.productNotFoundMessage.isDisplayed());
         extentLogger.pass("PASSED");
 
